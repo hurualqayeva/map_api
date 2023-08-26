@@ -19,6 +19,7 @@ class _StudentListScreenState extends State<StudentListScreen> {
 
   void toggle() {
     setState(() {
+      print(showPassword);
       showPassword = !showPassword;
     });
   }
@@ -58,8 +59,9 @@ class _StudentListScreenState extends State<StudentListScreen> {
                       _buildTableRow('Username', '${user.username}'),
                       _buildTableRow(
                          'Password', 
+                         
                         showPassword ? user.password : '******',
-                        showPassword ? null : toggle,
+                        toggle,
                         showPassword ? 'Hide' : 'Show',
                       ),
                     ],
