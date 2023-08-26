@@ -39,7 +39,7 @@ class _StudentListScreenState extends State<StudentListScreen> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisSize: MainAxisSize.min,
                 children: [
-                  Text(
+                const  Text(
                     'Student Detailed Information',
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
@@ -57,10 +57,10 @@ class _StudentListScreenState extends State<StudentListScreen> {
                       _buildTableRow('Age', '${user.age}'),
                       _buildTableRow('Username', '${user.username}'),
                       _buildTableRow(
-                         'Password', '${user.password}'
-                        // showPassword ? user.password : '******',
-                        // showPassword ? null : toggle,
-                        // showPassword ? 'Hide' : 'Show',
+                         'Password', 
+                        showPassword ? user.password : '******',
+                        showPassword ? null : toggle,
+                        showPassword ? 'Hide' : 'Show',
                       ),
                     ],
                   ),
